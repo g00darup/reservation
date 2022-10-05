@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Hospital | View Reservations</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Reservation Number</th>
+            <th>Reservation Name</th>
+            <th>Reservation Info</th>
+        </tr>
+        <tr th:each="reservation:${reservations}">
+            <td th:text="${reservation.number}">Number</td>
+            <td th:text="${reservation.name}">Name</td>
+            <td th:text="${reservation.info}">Info</td>
+        </tr>
+    </table>
+</body>
+</html>
