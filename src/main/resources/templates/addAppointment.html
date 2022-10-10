@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Hospital | Add Appointment</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>Add Appointment</h1>
+    <form action="#" th:action="@{/addAppointment}" method="post" th:object="${appointment}">
+        <label>Day:</label>
+        <input type="text" th:field="*{dayIn}" /><br/>
+
+        <label>Date:</label>
+        <input type="text" th:field="*{dateIn}" /><br/>
+
+        <label>Available:</label>
+        <input type="text" th:field="*{available}" /><br/>
+        <br/>
+        <label>DoctorId:</label>
+        <input type="text" th:field="*{doctorId}" /><br/>
+        <br/>
+        <button type="submit">Add Appointment</button>
+    </form>
+</div>
+</body>
+</html>

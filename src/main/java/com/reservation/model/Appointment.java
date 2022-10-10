@@ -17,10 +17,18 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long appointmentId;
     //@OneToOne(cascade = CascadeType.PERSIST)
-    @Transient
-    Doctor doctor;
-    @Transient
-    Calendar calendar;
-    @Transient
-    Slot slot;
+    @Column(name="DOCTORID")
+    Long doctorId;
+    @Column(name="DAYIN")
+    private String dayIn;
+    @Column(name="DATEIN")
+    private String dateIn;
+    @Column(name="AVAILABLE")
+    private String available;
+
+
+//    @Transient
+//    Calendar calendar;
+//    @Transient
+//    Slot slot;
 }

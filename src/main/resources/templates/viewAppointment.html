@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Hospital | View Doctors</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Doctor Id</th>
+        <th>Day</th>
+        <th>Date</th>
+        <th>Available</th>
+    </tr>
+    <tr th:each="appointment:${appointment}">
+        <td th:text="${appointment.doctorId}">Doctor Id</td>
+        <td th:text="${appointment.dayIn}">Day</td>
+        <td th:text="${appointment.dateIn}">Date</td>
+        <td th:text="${appointment.available}">Available</td>
+    </tr>
+</table>
+
+</body>
+</html>

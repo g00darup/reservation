@@ -13,10 +13,14 @@
         <th>Last Name</th>
     </tr>
     <tr th:each="doctor:${doctor}">
-        <td th:text="${doctor.employeeId}">Employee Number</td>
+        <!--td th:text="${doctor.employeeId}">Employee Number</td-->
         <td th:text="${doctor.firstName}">First Name</td>
         <td th:text="${doctor.lastName}">Last Name</td>
         <td th:text="${doctor.email}">Email</td>
+        <td>
+            <a th:href="@{/addAppointments/} +${doctor.employeeId}" th:text="${doctor.employeeId}"></a>
+            Add Appointment</td>
+
     </tr>
 </table>
 <body>
