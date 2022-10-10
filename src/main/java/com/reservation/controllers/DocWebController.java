@@ -27,7 +27,6 @@ public class DocWebController {
         //ModelAndView mv = new ModelAndView();
         System.out.println("employeeId is:"+employeeId+" "+employeeId.getClass());
         Optional<Doctor> doctor = doctorService.getDoctorbById(Long.parseLong(employeeId));
-        //mv.addObject("doctor",doctor.get());
         model.addAttribute("doctor",doctor.get());
         return "findDoctor";
     }
