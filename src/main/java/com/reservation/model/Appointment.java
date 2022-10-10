@@ -10,16 +10,17 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name="RESERVATION")
-public class Reservation {
+@Table(name="APPOINTMENT")
+public class Appointment {
     @Id
-    @Column(name="RESERVATION_ID")
+    @Column(name="APPOINTMENT_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservationId;
+    private Long appointmentId;
+    //@OneToOne(cascade = CascadeType.PERSIST)
     @Transient
-    String reservationName;
+    Doctor doctor;
     @Transient
-    Appointment appointment;
+    Calendar calendar;
     @Transient
-    Patient patient;
+    Slot slot;
 }

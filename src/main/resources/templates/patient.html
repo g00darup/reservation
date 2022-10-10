@@ -8,13 +8,11 @@
 
 <table>
     <tr>
-        <th>PatientId</th>
         <th>First Name</th>
         <th>Last Name</th>
 
     </tr>
     <tr th:each="patient:${patient}">
-        <td th:text="${patient.patientId}">Employee Number</td>
         <td th:text="${patient.firstName}">First Name</td>
         <td th:text="${patient.lastName}">Last Name</td>
     </tr>

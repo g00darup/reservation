@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Hospital | View Doctor's Detail page</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Employee Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr th:each="doctor:${doctor}">
+        <td th:text="${doctor.employeeId}">Employee Number</td>
+        <td th:text="${doctor.firstName}">First Name</td>
+        <td th:text="${doctor.lastName}">Last Name</td>
+        <td th:text="${doctor.email}">Email</td>
+    </tr>
+</table>
+<body>
+
+<!--<div align="center">-->
+<!--    <h1>Add Appointment</h1>-->
+<!--    <form action="#" th:action="@{/addDoctor}" method="post" th:object="${doctor}">-->
+<!--        <label>First name:</label>-->
+<!--        <input type="text" th:field="*{firstName}" /><br/>-->
+
+<!--        <label>Last name:</label>-->
+<!--        <input type="text" th:field="*{lastName}" /><br/>-->
+
+<!--        <br/>-->
+
+<!--        <button type="submit">Add Doctor</button>-->
+<!--    </form>-->
+<!--</div>-->
+</body>
+</html>

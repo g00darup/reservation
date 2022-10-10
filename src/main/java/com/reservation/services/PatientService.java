@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -15,5 +16,9 @@ public class PatientService {
     private PatientRepository patientRepository;
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
+    }
+    public Patient addPatient(Patient patient){return patientRepository.save(patient);}
+    public Optional<Patient> getPatientbById(Patient patient){
+        return patientRepository.findById(patient.getPatientId());
     }
 }

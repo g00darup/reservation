@@ -13,11 +13,27 @@
         <th>Last Name</th>
     </tr>
     <tr th:each="doctor:${doctor}">
-        <td th:text="${doctor.employeeId}">Employee Number</td>
+        <td>
+        <a th:href="@{/findDoctorById/${doctor.employeeId}}" th:text="${doctor.employeeId}"></a>
+            Employee Number</td>
         <td th:text="${doctor.firstName}">First Name</td>
         <td th:text="${doctor.lastName}">Last Name</td>
+        <td th:text="${doctor.email}">Email</td>
     </tr>
 </table>
-
+<div align="center">
+        <a th:href="@{/addDoctors}"> Add Doctor</a>
+        <br/>
+</div>
+<div align="center">
+    <table>
+        <tr>
+    <td th:label>employee Id:</td>
+<!--        <td> <input th:field="${employeeId}" type="text"/></td>-->
+    <td> <a th:href="@{/findDoctorById} + ${1}"> Find Doctor By Id </a></td>
+        </tr>
+    </table>
+    <br/>
+</div>
 </body>
 </html>
